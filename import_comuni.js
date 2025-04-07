@@ -2,7 +2,10 @@ const csv = require("csv-parser");
 const fs = require("fs");
 const { createClient } = require("@supabase/supabase-js");
 
-const supabase = createClient("https://<your-project>.supabase.co", "<anon-key>");
+const supabase = createClient(
+  "https://mjsqwfspdyvtwftnnmex.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1qc3F3ZnNwZHl2dHdmdG5ubWV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQwMzA2NTUsImV4cCI6MjA1OTYwNjY1NX0.ICDLHIiYEMkw1wnkmpFw6g9cGybl_kxIPQ_KgunwvCE"
+);
 
 fs.createReadStream("comuni.csv")
   .pipe(csv())
